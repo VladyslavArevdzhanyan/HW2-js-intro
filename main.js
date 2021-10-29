@@ -87,67 +87,25 @@ let array_second = [4, 5, 6];
 let array_concat = array.concat(array_second);
 console.log(array_concat);
 
-console.log('------------- # 12')
 
+
+
+
+console.log('------------- # 12')
 let a = 0;
 let info = 'Допустимо целое положительное число';
-
-function countNumber(number) {
-    if (number === 0) {
-        console.log(info)
-    } else if (Number.isInteger(number)) {
-        for (let i = 1; i <= number; i++) {
-            a += i;
-        }
-    }
-    else {
-        console.log(info);
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function countNumber(number) {
     if (number < 0) {
         console.log(info);
     } else if (Number.isInteger (number)) {
         for (let i = 1; i <= number; i++) {
-            console.log(a += i);
+            a += i;
         }
+        console.log(a)
     } else {
         console.log(info);
     }
 }
 
-
-
-countNumber(3)
+console.log(countNumber(3));
