@@ -92,20 +92,21 @@ console.log(array_concat);
 
 
 console.log('------------- # 12')
-let a = 0;
-let info = 'Допустимо целое положительное число';
 
 function countNumber(number) {
-    if (number < 0) {
-        console.log(info);
-    } else if (Number.isInteger (number)) {
-        for (let i = 1; i <= number; i++) {
-            a += i;
+    if (number > 1 && number%1===0) {
+        let result = 0;
+        for (let i = 0; i <= number; i++) {
+            result += i;
         }
-        console.log(a)
+        console.log(result);
+    } else if (number < 1) {
+        console.log('Введите целое положительное число от 1 включительно');
     } else {
-        console.log(info);
+        console.log('Введите целое число');
     }
 }
 
-console.log(countNumber(3));
+countNumber(5);
+countNumber(-5);
+countNumber(5.5);
